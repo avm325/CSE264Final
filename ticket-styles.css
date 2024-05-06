@@ -8,6 +8,7 @@
 #lower-level {
     display: block;
     transition: filter 0.3s ease-in-out;
+    width: 45vw;
 }
 
 #lower-level:hover {
@@ -16,8 +17,32 @@
 
 #sundeck {
     display: none;
+    transition: filter 0.3s ease-in-out;
+    width: 45vw;
+}
+
+#sundeck:hover {
+    filter: brightness(150%);
 }
 
 #pavilion {
+    position: relative;
+    right: 45vw;
+    bottom: 6.25vw;
     display: none;
+    transition: filter 0.3s ease-in-out;
+    width: 38vw;
+}
+
+#pavilion:hover {
+    filter: brightness(150%);
+}
+
+.level-arrows {
+    
+}
+
+#up_arrow, #down_arrow {
+    background-color: #a8cd63;
+    border: 0px;
 }
