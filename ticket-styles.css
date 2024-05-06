@@ -1,7 +1,6 @@
 .map-box {
     grid-column: 2/5;
-    width: 50vw;
-    background-color: white;
+    width: 90vw;
     display: flex;
 }
 
@@ -45,4 +44,12 @@
 #up_arrow, #down_arrow {
     background-color: #a8cd63;
     border: 0px;
+}
+
+#pavilion-ticket, #sundeck-ticket, #lower-level-ticket {
+    display: none;
+}
+
+#ticket-info {
+    position: absolute;
 }

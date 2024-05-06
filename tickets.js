@@ -106,3 +106,9 @@ down_arrow.addEventListener("click", function () {
 
 let test_ticket = new ticket("Gourmet Ticket", "Lower level", 199.00, "Bananza-Images/Tickets/darker-yellow-ticket.png");
 cart_items.push(test_ticket);
+
+
+sessionStorage.setItem("name", "Gourmet Ticket");
+sessionStorage.setItem("section", "Lower Level");
+sessionStorage.setItem("price", "199.00");
+sessionStorage.setItem("image", "Bananza-Images/Tickets/darker-yellow-ticket.png");
