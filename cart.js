@@ -13,7 +13,6 @@ function getCartBubble(){
     console.log(number);
 }
 
-
 function removeItem(){
     $(".button-remove").click((event) => {
         console.log("remove button clicked");
@@ -68,6 +67,7 @@ $(document).ready(function() {
     removeItem();
     quantityChanged();
     getCartBubble();
+    getCartItem();
 
     
 });
