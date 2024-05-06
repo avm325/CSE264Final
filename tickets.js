@@ -108,7 +108,6 @@ let test_ticket = new ticket("Gourmet Ticket", "Lower level", 199.00, "Bananza-I
 cart_items.push(test_ticket);
 
 
-sessionStorage.setItem("itemName", "Gourmet Ticket");
-sessionStorage.setItem("section", "Lower Level");
-sessionStorage.setItem("price", "199.00");
-sessionStorage.setItem("image", "Bananza-Images/Tickets/darker-yellow-ticket.png");
+localStorage.setItem("itemName", "Gourmet Ticket");
+localStorage.setItem("section", "Lower Level");Storage.setItem("price", "199.00");
+localStorage.setItem("image", "Bananza-Images/Tickets/darker-yellow-ticket.png");
