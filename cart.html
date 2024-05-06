@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="https://use.typekit.net/hyi1ept.css">
+<link rel= "stylesheet" href="stylesheet.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/xzn4ydj.css">
+    <script src="js/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="cart.js"></script>
+    <script src="userInitial.js"></script>
+
+    <title>Cart</title>
+</head>
+
+<body id="cart-grad-bg">
+    <div class="grid_index">
+        <!-- main grid -->
+        <div class="hamburger">
+            <nav role="navigation">
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                       <a href="index.html"><p>Home</p></a>
+                        <br>
+                        <a href="cart.html"><p>Your Cart</p></a>
+                        <br>
+                        <a href="admissions.html"><p>Admissions</p></a>
+                        <br>
+                        <a href="our-story.html"><p>About</p></a>
+                        <br> 
+                    </ul>
+                </div>
+            </nav>
+
+
+        </div>
+        <div class="logo"><img src="Bananza-Images/bananza logo.svg" alt="Bananza Logo"></div>
+        
+        <button class="button-tickets" role="button"><a href="tickets.html">TICKETS</a></button> 
+
+        <div class="userImage" id="userImage">
+            <a href="cart.html"></a>
+                <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+                    <circle r="22" cx="50" cy="50" fill="#64331E" />
+                    <text x="50" y="60" text-anchor="middle" fill="white" id="initialLetter"></text>
+                    <circle r="12" cx="65" cy="68" fill="#EB5958" />
+                    <text x="65" y="72" text-anchor="middle" fill="white" id="cartBubble"></text>
+                </svg>
+            </a>
+        </div>
+
+
+        <section class="cart" id="cart">
+            <h3 style="font-size: 45px;">CART</h3> <br><br>
+            
+                    <div class="cart-row">
+                        <div class="cart-item cart-column">
+                            <img class="cart-item-image" src="Bananza-Images/Tickets/dark-pink-ticket.png" width="100" height="100">
+                            <span class="cart-item-title">Gourmet </span>
+                        </div>
+                        <span class="cart-price cart-column">150.00</span>
+                        <div class="cart-quantity cart-column">
+                            <input name="quantity "class="cart-quantity-input" type="number" value="1">
+                            <button class="button-remove" type="button">Remove</button>
+                        </div>
+                    </div>
+
+
+
+        </section>
+                <div class="cart-summary">
+                    <h4 >Order Summary</h4> 
+                        <br>
+                    Recipient: <div id="userName"></div> <br><br>
+                    Shipping: TBD <br><br>
+                    Tax: TBD <br><br>
+                    <h4><div id="cart-total">Total: $0.00</div></h4>
+
+                </div>
+        
+      
+
+            <div class="cart-starfruit"><img src="Bananza-Images/Token Images/starfruit.png" alt="starfruit"></div>
+          
+    </div> <!-- end MAIN grid -->
+    
+    <footer>
+        
+        <div class="footer_content">©BANANZA</div>
+        <div class="footer_content">Privacy Policy</div>
+        <div class="footer_content">Cookies</div>
+        <div class="footer_content">Terms and Conditions</div>
+        <div class="footer_content">Help</div>
+        <div class="icons">
+            <img src="Bananza-Images/Icons - Sponsors/twitter.png" alt="twitter">
+            <img src="Bananza-Images/Icons - Sponsors/instagram-icon.png" alt="instagram">
+        </div>
+    </footer>
+    
+</body>
+</html>
