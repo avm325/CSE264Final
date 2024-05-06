@@ -1,1 +1,81 @@
-Hello
+ <div class="faq">        
+            <h3 style="font-size: 45px;">FAQ</h3> <br><br>
+
+            <div class="faq-ctn">
+                <main>
+                  <section class="faq-container">
+                      <div class="faq-one">
+                          <!-- faq question -->
+                          <h3 class="faq-page">What is your refund policy?</h3>
+                          <!-- faq answer -->
+                          <div class="faq-body">
+                              <div class="faq-answer-txt">Unfortunately, our tickets are <span style="font-weight:bolder"> nonrefundable and nonresellable.</span> <br>
+                                Our chiefs and vendors have traveled far and wide to help showcase their skills and ingredients!
+                                Our best suggestion is to mark your calendars when you buy your tickets so you don’t forget about this event!
+                              </div>
+                          </div>
+                      </div>
+                      <hr class="hr-line">
+          
+                      <div class="faq-two">
+                          <!-- faq question -->
+                          <h1 class="faq-page">What happens if there is inclement weather?</h1>
+                          <!-- faq answer -->
+                          <div class="faq-body">
+                            <div class="faq-answer-txt">If it is raining, we will provide extra seating inside and cover our outdoor seating area.
+                              Incase of severe weather, we will notify everyone as soon as we can about the cancellation. We will only reimburse tickets in case of cancellation of bad weather.  <br></div>
+                            </div>
+                        </div>
+                      <hr class="hr-line">
+          
+                      <div class="faq-three">
+                          <!-- faq question -->
+                          <h1 class="faq-page">Can I buy tickets at the venue?</h1>
+                          <!-- faq answer -->
+                          <div class="faq-body">
+                              <div class="faq-answer-txt">Unfortunately, we will not be selling tickets at the venue. We will only be selling tickets online. <br>
+                              </div>
+                          </div>
+                      </div>
+                      <hr class="hr-line">
+          
+                      <div class="faq-four">
+                        <!-- faq question -->
+                        <h3 class="faq-page">What does a tasting mean? What about a drink?</h3>
+                        <!-- faq answer -->
+                        <div class="faq-body">
+                            <div class="faq-answer-txt">A tasting consists of a single sample of food. These portions can be eaten in 4 or 5 bites.<br>
+                              <br>In our daily passes, a drink is any non-alcholic beverage. If you are 21 and older (with a valid ID) and purchase the weekend package,
+                              those tickets include the option to acquire an alcoholic drink. <br>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+          
+                    <div class="faq-five">
+                      <!-- faq question -->
+                      <h1 class="faq-page">Can I bring outside food and drink?</h1>
+                      <!-- faq answer -->
+                      <div class="faq-body">
+                          <div class="faq-answer-txt">Unfortunately, we do not allow outside food and drinks. You may bring empty waterbottles to fill them up at the venue. Be sure to come hungry because we will have plenty of food options
+                            for everyone! <br>
+                      </div>
+                  </div>
+                  <hr class="hr-line">
+          
+                  <div class="faq-six">
+                    <!-- faq question -->
+                    <h1 class="faq-page">Is there security on the premises?</h1>
+                    <!-- faq answer -->
+                    <div class="faq-body">
+                        <div class="faq-answer-txt">There is security on the premise. We have asked the local Seattle Police Department to help keep everyone safe and having fun! <br>
+                    </div>
+                  </div>
+                <hr class="hr-line">
+          
+                </section>
+                </main>
+                <script src="tickets.js"></script>
+                <!-- end faq tag-->
+              </div>
+          </div>
