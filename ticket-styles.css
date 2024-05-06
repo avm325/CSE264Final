@@ -1,0 +1,23 @@
+.map-box {
+    grid-column: 2/5;
+    width: 50vw;
+    background-color: white;
+    display: flex;
+}
+
+#lower-level {
+    display: block;
+    transition: filter 0.3s ease-in-out;
+}
+
+#lower-level:hover {
+    filter: brightness(150%);
+}
+
+#sundeck {
+    display: none;
+}
+
+#pavilion {
+    display: none;
+}
