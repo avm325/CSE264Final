@@ -1,3 +1,18 @@
+/*
+    Jordan Schrier
+    813250399
+    Server side - sends added tickets to the cart
+*/
+
+const express = require("express");
+const path = require("path");
+
+const app = express();
+
+app.use(express.static(
+  path.resolve(__dirname, "public")
+));
+
 //array to hold tickets that have been added to the cart
 let cart_items = [];
 
@@ -107,7 +122,9 @@ down_arrow.addEventListener("click", function () {
 let test_ticket = new ticket("Gourmet Ticket", "Lower level", 199.00, "Bananza-Images/Tickets/darker-yellow-ticket.png");
 cart_items.push(test_ticket);
 
+//send array of cart items to the client
+app.get("/cart_click", (req, res) => {
+    res.json(cart_items);
+});
 
-localStorage.setItem("itemName", "Gourmet Ticket");
-localStorage.setItem("section", "Lower Level");Storage.setItem("price", "199.00");
-localStorage.setItem("image", "Bananza-Images/Tickets/darker-yellow-ticket.png");
+app.listen(3000, () => console.log("Initializing cart..."));
