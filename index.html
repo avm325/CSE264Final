@@ -9,9 +9,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/xzn4ydj.css">
-    <title>Bananza - Homepage</title>
+    <link rel="icon" type="image/png" href="Bananza-Images/Token Images/tomato.png">
+
+    <script src="js/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="popup.js"></script>
+    <script src="userInitial.js"></script>
+    <title>Bananza</title>
 </head>
 <body>
+
+    <div id="popup-ad" class="popup">
+        <div class="popup-content">
+            <h2>WELCOME!</h2>
+            <p>Please enter your name:</p> <br>
+            <input type="text" id="nameInput"> <br>
+            <button onclick="submitName()"><p>Submit</p></button> 
+            <!-- https://www.w3schools.com/jsref/event_onclick.asp -->
+        </div>
+    </div>
 
     <div class="grid_index">
         <!-- main grid -->
@@ -23,18 +38,14 @@
                     <span></span>
                     <span></span>
                     <ul id="menu">
-                        <a href="index.html">
-                            <p class="Menu-home">Home</p>
-                        </a>
-                        <a href="tickets.html"></a>
-                            <p class="Menu-tickets">Tickets</p>
-                        </a>
-                        <a href="our-story.html"></a>
-                            <p class="Menu-about">About</p>
-                        </a>
-                        <a href="our-story.html">
-                            <p class="Menu-conact">Contact Us</p>
-                        </a>
+                        <a href="index.html"><p>Home</p></a>
+                        <br>
+                        <a href="cart.html"><p>Your Cart</p></a>
+                        <br>
+                        <a href="admissions.html"><p>Admissions</p></a>
+                        <br>
+                        <a href="our-story.html"><p>About</p></a>
+                        <br>                       
                     </ul>
                 </div>
             </nav>
@@ -54,8 +65,19 @@
             <h4 style="font-family: neue-kabel; font-size: 30px;">Seattle, WA</h4>
         </div>
         
-        <button class="button-tickets" role="button"><a href="tickets.html" style="text-decoration: none; color:white;">TICKETS</a></button> 
+        <button class="button-tickets" role="button"><a href="tickets.html">TICKETS</a></button> 
         
+        <div class="userImage" id="userImage">
+            <a href="cart.html"></a>
+                <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+                    <circle r="22" cx="50" cy="50" fill="#64331E" />
+                    <text x="50" y="60" text-anchor="middle" fill="white" id="initialLetter"></text>
+                    <circle r="12" cx="65" cy="68" fill="#EB5958" />
+                    <text x="65" y="72" text-anchor="middle" fill="white" id="cartBubble"></text>
+                </svg>
+            </a>
+        </div>
+
         <div class="tomato1">
             <img src="Bananza-Images/Token Images/tomato.png" alt="tomato">
         </div>
@@ -71,17 +93,13 @@
 
             <div class="dimsum"><img src="Bananza-Images/Token Images/dimsum.png" alt="Chinese Dumplings"></div>
             <div class="curry"><img src="Bananza-Images/Token Images/curry1.png" alt="Curry"></div>
-            <div class="peppers"><img src="Bananza-Images/Token Images/peppers.png" alt="peppers"></div>
+            <!-- <div class="peppers"><img src="Bananza-Images/Token Images/peppers.png" alt="peppers"></div> -->
+            <!-- <div class="paella"><img src="Bananza-Images/Token Images/paella.png" alt="paella"></div> -->
 
 
         <div class="info_content" id="itinerary">        
-            <div class="paella"><img src="Bananza-Images/Token Images/paella.png" alt="paella"></div>
-
-                <div class="heading"style="grid-row:1"><h2>WEEKEND ONE</h2><h4>May 6th – 7th</h4></div> 
-                <div class="line_container">
-                    <div class="line"></div>
-                </div>
-                    
+                
+            <div class="heading"style="grid-row:1"><h2>WEEKEND ONE</h2><h4>May 6th – 7th</h4></div> 
                 <div class="day" id="asia">
                     DAY 1:
                     <h4>Asian Cuisine</h4>
@@ -93,14 +111,7 @@
                         Korean <br>
                     </div>
                 </div>
-                        <!-- <div class="line_container"id="asia" style="padding-top: 20vw;">
-                            <div class="line"></div>
-                            <div class="line"style="width: 24vw"></div>
-                            <div class="line"style="width: 28vw"></div>
-                            <div class="line"style="width: 24.5vw"></div>
-                            <div class="line"style="width: 27vw"></div>
-                        </div> -->
-
+                       
                 <div class="day" id="america">
                     DAY 2:
                     <h4>American Influence</h4>
@@ -112,18 +123,8 @@
                         Chilean <br>
                     </div>
                 </div>
-                        <!-- <div class="line_container"id="america"style="padding-top: 7vw; padding-left:23vw;">
-                            <div class="line"style="margin-left:1.5vw"></div>
-                            <div class="line"style="margin-left:3vw"></div>
-                            <div class="line"style="margin-left:2.5vw"></div>
-                            <div class="line"style="margin-left:1.5vw"></div>
-                            <div class="line"style="margin-left:0.5vw"></div>
-                        </div> -->
-
+                       
                 <div class="heading"style="grid-row:2;padding-bottom:0vw;"><h2>WEEKEND TWO</h2> <h4>May 13th – 14th</h4></div>
-                <div class="line_container" style="grid-row: 2;">
-                    <div class="line"></div>
-                </div>
 
                 <div class="day" id="africa">
                     DAY 1:
@@ -136,13 +137,6 @@
                         Angolan <br>
                     </div>
                 </div>
-                        <!-- <div class="line_container"id="africa" style="padding-top:20vw;">
-                            <div class="line"style="width: 25vw"></div>
-                            <div class="line"style="width: 26.5vw"></div>
-                            <div class="line"style="width: 19.25vw"></div>
-                            <div class="line"style="width: 24vw"></div>
-                            <div class="line"style="width: 25.5vw"></div>
-                        </div> -->
 
                 <div class="day" id="europe">
                     DAY 2:
@@ -156,29 +150,23 @@
                     </div>
                 </div>
 
-                        <!-- <div class="line_container"id="europe"style="padding-top: 7vw; padding-left:20vw;">
-                            <div class="line"style="margin-left:2.5vw"></div>
-                            <div class="line"style="margin-left:3.75vw"></div>
-                            <div class="line"style="margin-left:1.75vw"></div>
-                            <div class="line"style="margin-left:1.5vw"></div>
-                            <div class="line"style="margin-left:3.75vw"></div>
-                        </div> -->
-
-
         </div><!-- end MENU_INFO grid -->
+
             <div class="martini"><img src="Bananza-Images/Token Images/martini.png" alt="matini"></div>
             <div class="beer"><img src="Bananza-Images/Token Images/beer2.png" alt="beer"></div>
-            <div class="wine"><img src="Bananza-Images/Token Images/wine.png" alt="wine"></div>
+            <!-- <div class="wine"><img src="Bananza-Images/Token Images/wine.png" alt="wine"></div> -->
             
-            <div class="tagline" id="cocktails1">
-                Experience specialty cocktails<br>from around the world...
+            <div class="cocktails">
+                <div class="tagline">
+                Raise your spirits with our <br> world-class cocktail collection.
+                
             </div> 
-           
             <p id="cocktails2">BANANZA 2023’s featured bartenders hail from a diverse array of countries, 
                 embarking you on a global journey in the comfort of your seat. Join us, and indulge in a 
                 captivating exploration of flavors and cultures with our expertly crafted specialty cocktails 
                 from around the world. Each sip will transport you to a different corner of the globe and 
-                leave you with unforgettable memories of the exotic and the extraordinary. <br><br> <br>  Must be 21+ with valid ID.</p>
+                leave you with unforgettable memories of the exotic and the extraordinary. <br><br>  Must be 21+ with valid ID.</p>
+            </div>
             
             <div class="tagline" id="music">
                 Live music, including some of <br>Seattle’s finest artists. 
