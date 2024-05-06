@@ -16,3 +16,17 @@ for (i = 0; i < faq.length; i++) {
         }
     });
 }
+
+//class for ticket objects
+/*  
+    section: string
+    price: number
+    gourmet: boolean
+*/
+class ticket{
+    constructor(section, price, gourmet){
+        this.section = section;
+        this.price = price;
+        this.gourmet = gourmet;
+    }
+}
