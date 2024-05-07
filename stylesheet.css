@@ -1448,7 +1448,7 @@ border: none;
     grid-row: 3;
     color: #64331E;
     font-size: 12px;
-    font-family: "neue-kabel";
+    font-family: "neue-kabel"; margin: 5vw 0 0 0;
   }
   .cart-summary{
     display: flex; 
@@ -1459,7 +1459,7 @@ border: none;
     grid-row:3;
     color: #64331E;
     font-size: 14px;
-    font-family: "neue-kabel";
+    font-family: "neue-kabel";margin: 5vw 0 0 0;
   }
 #cart-total{
   font-size: 18px;
