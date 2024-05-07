@@ -11,6 +11,9 @@ let current_price = 0;
 let current_name = "";
 let current_section = "";
 
+//keep track of cart total globally
+let total = 0;
+
 //class for ticket objects
 /*  
     name: string
@@ -36,31 +39,37 @@ $("#lower_level").click(function(){
     $("#section").empty();
     $("#section").html("Section: lower level");
 
-    current_name = "Lower level"
+    current_name = "Lower level";
     current_price = 99;
 
     $("#price").empty();
-    $("#price").append("Price: ", current_price);
+    $("#price").append("Price: $", current_price, ".00");
     $("#selected-ticket").css("display", "block")
 
+    //reset upgrade checkbox
+    document.getElementById('upgrade').checked = false;
 });
 
 //update price every time gourmet checkbox is checked/unchecked
 $("#upgrade").click(function () {
-    let price = $("#price");
     if(upgrade.checked){
         current_price += 100;
         $("#price").empty(); //clear current price
-        price.append("Price: $199"); //update price
+        $("#price").append("Price: $", current_price, ".00"); //update price
     }else{
+        current_price -= 100;
         $("#price").empty(); //clear current price
-        price.append("Price: $99"); //update price
+        $("#price").append("Price: $", current_price, ".00"); //update price
     }
 });
 
 //when user selects "add to cart"
 $("#add").click(function () {
     let new_ticket = new ticket(current_name, current_section, current_price);
+    //update cart total
+    total += new_ticket.price;
+    $("#cart-total").html(`Total: $${total}.00`);
+
     let image = "";
     let print_name = "";
     //find associated ticket color
@@ -72,15 +81,17 @@ $("#add").click(function () {
         image = "Bananza-Images/Tickets/light-pink-ticket.png";
     }
     
+    //add (gourmet) next to the name if gourmet ticket
    if(document.getElementById('upgrade').checked){
         print_name = `${new_ticket.name} (gourmet)`;
    }else{
         print_name = new_ticket.name;
    }
 
+   //add new row to cart
     $("#ticket-items").append(`<div class="cart-row"><div class="cart-item cart-column">
         <img class="cart-item-image" src=${image} width="100" height="100">
-        <span class="cart-item-title">${print_name}</span><span class="cart-item-section"><br><br><br><br>Section: ${new_ticket.section}</span></div>
+        <span class="cart-item-title">${print_name}</span></div>
         <span class="cart-price cart-column">$${new_ticket.price}.00</span><div class="cart-quantity cart-column">
         <input name="quantity "class="cart-quantity-input" type="number" value="1">
         <button class="button-remove" type="button">Remove</button></div></div>`);
@@ -94,6 +105,15 @@ $("#sundeck").click(function () {
 
     current_name = "Sundeck"
     current_price = 130;
+
+    $("#section").empty();
+    $("#section").html("Section: Sundeck");
+
+    $("#price").empty();
+    $("#price").append("Price: $", current_price, ".00");
+
+    //reset upgrade checkbox
+    document.getElementById('upgrade').checked = false;
 });
 
 $("#pavilion").click(function () {
@@ -104,6 +124,15 @@ $("#pavilion").click(function () {
 
     current_name = "Pavilion"
     current_price = 150;
+
+    $("#section").empty();
+    $("#section").html("Section: Pavilion");
+
+    $("#price").empty();
+    $("#price").append("Price: $", current_price, ".00");
+
+    //reset upgrade checkbox
+    document.getElementById('upgrade').checked = false;
 });
 
 //display the upper level (sundeck and pavilion)
