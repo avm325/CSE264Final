@@ -22,8 +22,15 @@ function placeName(){
 }
 
 function placeTotalBubble(){
-    let number = sessionStorage.getItem('cartBubbleNum'); 
+    let number;
+    if(number <1 || number == null){
+        number =0;
         $('#cartBubble').text(number);
+    }else{
+        number = sessionStorage.getItem('cartBubbleNum'); 
+        $('#cartBubble').text(number);
+    }
+    
      
 }
 

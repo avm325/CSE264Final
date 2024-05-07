@@ -10,7 +10,7 @@ function getCartBubble(){
         sessionStorage.setItem('cartBubbleNum', number); 
 
     });
-    console.log(number);
+    console.log("this is items in cart:" + number);
 }
 
 function removeItem(){
@@ -67,5 +67,6 @@ $(document).ready(function() {
     removeItem();
     quantityChanged();
     getCartBubble();
+    setInterval(getCartBubble, 1000);
     
 });

@@ -70,6 +70,7 @@
 form {
     position: relative;
     bottom: 20vw;
+    margin: 0 3vw;
     left: 5vw;
     appearance: none;
     -webkit-appearance: none;
@@ -79,7 +80,7 @@ form {
 
 form > * {
     font-family: "neue-kabel";
-    font-size: 23px;
+    font-size: 18px;
 }
 
 form > button {
