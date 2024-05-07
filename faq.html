@@ -13,12 +13,24 @@
 
     <script src="js/jquery.min.js" crossorigin="anonymous"></script>
     <script src="userInitial.js"></script>
+    <script src="faq.js"></script>
+
     <title>About</title>
 </head>
 <body id="about-grad-bg">
 
 
     <div class="grid_index">
+        <div class="userImage" id="userImage">
+            <a href="cart.html"></a>
+                <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+                    <circle r="22" cx="50" cy="50" fill="#64331E" />
+                    <text x="50" y="60" text-anchor="middle" fill="white" id="initialLetter"></text>
+                    <circle r="12" cx="65" cy="68" fill="#EB5958" />
+                    <text x="65" y="72" text-anchor="middle" fill="white" id="cartBubble"></text>
+                </svg>
+            </a>
+        </div>
         <!-- main grid -->
         <div class="hamburger">
             <nav role="navigation">
@@ -32,7 +44,7 @@
                         <br>
                         <a href="cart.html"><p>Your Cart</p></a>
                         <br>
-                        <a href="admissions.html"><p>Admissions</p></a>
+                        <a href="faq.html"><p>FAQ</p></a>
                         <br>
                         <a href="our-story.html"><p>About</p></a>
                         <br>                       
@@ -62,86 +74,71 @@
             <h3 style="font-size: 45px;">FAQ</h3> <br><br>
 
             <div class="faq-ctn">
-                <main>
-                      <div class="quesiton">
-                          <!-- faq question -->
-                          What is your refund policy?
-                          <!-- faq answer -->
-                          <div class="faq-body">
-                              <div class="faq-answer-txt">Unfortunately, our tickets are  nonrefundable. <br>
-                                Our chiefs and vendors have traveled far and wide to help showcase their skills and ingredients!
-                                Our best suggestion is to mark your calendars when you buy your tickets so you don’t forget about this event!
-                              </div>
-                          </div>
-                      </div>
-                      <hr class="hr-line">
-          
-                      <div class="faq-two">
-                          <!-- faq question -->
-                          <h1 class="faq-page">What happens if there is inclement weather?</h1>
-                          <!-- faq answer -->
-                          <div class="faq-body">
-                            <div class="faq-answer-txt">If it is raining, we will provide extra seating inside and cover our outdoor seating area.
-                              Incase of severe weather, we will notify everyone as soon as we can about the cancellation. We will only reimburse tickets in case of cancellation of bad weather.  <br></div>
-                            </div>
-                        </div>
-                      <hr class="hr-line">
-          
-                      <div class="faq-three">
-                          <!-- faq question -->
-                          <h1 class="faq-page">Can I buy tickets at the venue?</h1>
-                          <!-- faq answer -->
-                          <div class="faq-body">
-                              <div class="faq-answer-txt">Unfortunately, we will not be selling tickets at the venue. We will only be selling tickets online. <br>
-                              </div>
-                          </div>
-                      </div>
-                      <hr class="hr-line">
-          
-                      <div class="faq-four">
-                        <!-- faq question -->
-                        <h3 class="faq-page">What does a tasting mean? What about a drink?</h3>
-                        <!-- faq answer -->
-                        <div class="faq-body">
-                            <div class="faq-answer-txt">A tasting consists of a single sample of food. These portions can be eaten in 4 or 5 bites.<br>
-                              <br>In our daily passes, a drink is any non-alcholic beverage. If you are 21 and older (with a valid ID) and purchase the weekend package,
-                              those tickets include the option to acquire an alcoholic drink. <br>
-                            </div>
-                        </div>
-                    
-                    <hr class="hr-line">
-          
-                    <div class="faq-five">
-                      <!-- faq question -->
-                      <h1 class="faq-page">Can I bring outside food and drink?</h1>
-                      <!-- faq answer -->
-                      <div class="faq-body">
-                          <div class="faq-answer-txt">Unfortunately, we do not allow outside food and drinks. You may bring empty waterbottles to fill them up at the venue. Be sure to come hungry because we will have plenty of food options
-                            for everyone! <br>
-                      </div>
-                  </div>
-                  <hr class="hr-line">
-          
-                  <div class="faq-six">
-                    <!-- faq question -->
-                    <h1 class="faq-page">Is there security on the premises?</h1>
-                    <!-- faq answer -->
-                    <div class="faq-body">
-                        <div class="faq-answer-txt">There is security on the premise. We have asked the local Seattle Police Department to help keep everyone safe and having fun! <br>
+                
+                <div class="question-container">
+                    <div class="question">
+                        <h4>What is your refund policy?</h4>
                     </div>
-                  </div>
+                    <!-- faq answer -->
+                    <div class="answer">
+                        Unfortunately, our tickets are nonrefundable. <br>
+                        Our chefs and vendors have traveled far and wide to help showcase their skills and ingredients!
+                        Our best suggestion is to mark your calendars or gift the tickets to a friend!
+                    </div>
+                </div>
                 <hr class="hr-line">
+                
+                <div class="question-container">
+                    <div class="question">
+                        <h4>What is your exchange policy?</h4>
+                    </div>
+                    <!-- faq answer -->
+                    <div class="answer">
+                        Our tickets are non-exchangeable. However, if you have extenuating circumstances, please contact our customer support team, and we'll do our best to assist you.
+                    </div>
+                </div>
+                    <hr class="hr-line">
+
+                    <div class="question-container">
+                        <div class="question">
+                            <h4>What time do the gates open/close each day?</h4>
+                        </div>
+                        <!-- faq answer -->
+                        <div class="answer">
+                            Our opening times are 11am - 10pm on the festival days! Wear conmfy shoes and come hungry. 
+                        </div>
+                    </div>
+                        <hr class="hr-line">
+
+                        <div class="question-container">
+                            <div class="question">
+                                <h4>Can I bring a child to the festival?</h4>
+                            </div>
+                            <!-- faq answer -->
+                            <div class="answer">
+                                Bananza guests must be ages 18+. This one's for the parents, sorry kiddo's!
+                            </div>
+                        </div>
+                            <hr class="hr-line">
           
-                </section>
-                </main>
-                <script src="tickets.js"></script>
+               
+                <script src="faq.js"></script>
                 <!-- end faq tag-->
               </div>
-          </div>
+        </div>
+
+        <div class="userQ">
+            <p>Have a question? Add it below!</p>
+            <input type="text" id="userQuestion"> <br>            
+            <button onclick="submitQuestion()" id="submitQuestion"><p>Submit</p></button>
+        
+        </div>
 
 
-            <div class="dimsum"><img src="Bananza-Images/Token Images/orange.png" alt="Chinese Dumplings"></div>
-            <div class="curry"><img src="Bananza-Images/Token Images/lemon-slice.png" alt="Curry"></div>
+            <div class="orange"><img src="Bananza-Images/Token Images/orange.png" alt="Chinese Dumplings"></div>
+            <div class="lemon"><img src="Bananza-Images/Token Images/lemon-slice.png" alt="Curry"></div>
+
+            
 
 
 <div class="newsletter">
