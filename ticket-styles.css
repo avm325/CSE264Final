@@ -82,6 +82,19 @@ form > * {
     font-size: 23px;
 }
 
+form > button {
+    background-color: #a8cd63;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 2vw;
+}
+
+form > button:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
 .level-arrows {
     margin-bottom: 3vw;
 }

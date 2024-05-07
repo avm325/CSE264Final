@@ -36,12 +36,13 @@ $("#lower_level").click(function(){
     $("#section").empty();
     $("#section").html("Section: lower level");
 
-    $("#price").empty();
-    $("#price").append("Price: $99");
-    $("#selected-ticket").css("display", "block")
-
     current_name = "Lower level"
     current_price = 99;
+
+    $("#price").empty();
+    $("#price").append("Price: ", current_price);
+    $("#selected-ticket").css("display", "block")
+
 });
 
 //update price every time gourmet checkbox is checked/unchecked
@@ -76,7 +77,7 @@ $("#add").click(function () {
    }else{
         print_name = new_ticket.name;
    }
-   
+
     $("#ticket-items").append(`<div class="cart-row"><div class="cart-item cart-column">
         <img class="cart-item-image" src=${image} width="100" height="100">
         <span class="cart-item-title">${print_name}</span><span class="cart-item-section"><br><br><br><br>Section: ${new_ticket.section}</span></div>
