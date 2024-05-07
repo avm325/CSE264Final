@@ -114,7 +114,7 @@ app.get("/cart_click", (req, res) => {
     res.json(cart_items);
 });
 
-$(document).ready(function() {
+$(document).ready(function(){
     loadTickets();
 });
 

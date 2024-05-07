@@ -67,6 +67,5 @@ $(document).ready(function() {
     removeItem();
     quantityChanged();
     getCartBubble();
-
     
 });

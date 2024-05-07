@@ -1505,7 +1505,7 @@
   }
   #cart{
     grid-column: 3/9;
-    grid-row: 2;
+    grid-row: 3;
     color: #64331E;
     font-size: 12px;
     font-family: "neue-kabel";
@@ -1514,9 +1514,9 @@
     display: flex; 
     flex-direction: column;
     justify-content: space-between;
-    margin: 7vw 0 0 2vw;
+    margin: 0vw 0 0 2vw;
     grid-column: 9/11;
-    grid-row: 2;
+    grid-row:3;
     color: #64331E;
     font-size: 14px;
     font-family: "neue-kabel";
@@ -1567,6 +1567,13 @@
     scale: 75%;
     padding-top: 10vw;
     position: relative;
+}
+.ticket-select{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  grid-column: 1/13;
+  grid-row: 2;
 }
 
 /*CART Style END*/
