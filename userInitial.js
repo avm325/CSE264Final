@@ -21,21 +21,21 @@ function placeName(){
     }
 }
 
-function placeTotalBubble(){
-    let number;
-    if(number <1 || number == null){
-        number =0;
-        $('#cartBubble').text(number);
-    }else{
-        number = sessionStorage.getItem('cartBubbleNum'); 
-        $('#cartBubble').text(number);
-    }
+// function placeTotalBubble(){
+//     let number;
+//     if(number <1 || number == null){
+//         number =0;
+//         $('#cartBubble').text(number);
+//     }else{
+//         number = sessionStorage.getItem('cartBubbleNum'); 
+//         $('#cartBubble').text(number);
+//     }
     
      
-}
+// }
 
 $(document).ready(function() {
     updateInitial();
     placeName();
-    setInterval(placeTotalBubble, 1000); //check for updates
+    // setInterval(placeTotalBubble, 1000); //check for updates
 });

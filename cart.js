@@ -8,9 +8,16 @@ function getCartBubble(){
         number += (quantity);
         console.log(number);    
         sessionStorage.setItem('cartBubbleNum', number); 
+        placeTotalBubble(number);
 
     });
-    console.log("this is items in cart:" + number);
+}
+
+function placeTotalBubble(number){
+    if(number>0){
+        number = sessionStorage.getItem('cartBubbleNum'); 
+        $('#cartBubble').text(number);
+    }
 }
 
 function removeItem(){
@@ -60,7 +67,8 @@ function updateCartTotal() {
 
 
 $(document).ready(function() {
-    $('#cart-quantity-input').change(function() {
+    $('#cartBubble').text(0);
+    $('.cart-quantity-input').change(function() {
         updateCartTotal();
     });
     updateCartTotal();
