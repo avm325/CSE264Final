@@ -16,10 +16,6 @@ app.use(express.static(
 //array to hold tickets that have been added to the cart
 let cart_items = [];
 
-var i;
-
-
-
 //class for ticket objects
 /*  
     name: string
@@ -114,9 +110,15 @@ app.get("/cart_click", (req, res) => {
     res.json(cart_items);
 });
 
-$(document).ready(function() {
-    loadTickets();
-});
-
+if (typeof jQuery != 'undefined') {
+    // jQuery is loaded => safe to use it
+    $(document).ready(function() {
+        loadTickets();
+    });
+} else {
+    // jQuery is not loaded => handle the situation
+    console.log("jQuery is not loaded");
+}
+console.log(cart_items);
 app.listen(3000, () => console.log("Initializing cart..."));
 console.log(cart_items);
