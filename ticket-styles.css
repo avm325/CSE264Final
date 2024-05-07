@@ -50,5 +50,55 @@
 }
 
 .ticket-select {
+    margin-top: 5vw;
     margin-left: 8vw;
+}
+
+#selected-ticket {
+    display: none;
+}
+
+#selected-ticket > * {
+    width: 45vw;
+}
+
+#selected-ticket > p {
+    position: relative;
+    left: 5vw;
+}
+
+form {
+    position: relative;
+    bottom: 20vw;
+    left: 5vw;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+}
+
+form > * {
+    font-family: "neue-kabel";
+    font-size: 17px;
+}
+
+.level-arrows {
+    margin-bottom: 3vw;
+}
+
+.level-arrows > span {
+    font-family: "neue-kabel";
+    font-size: 23px;
+}
+
+.level-arrows > button{
+    width: 5vw;
+    height: 3vw;
+    border-radius: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.level-arrows > button:hover {
+    color: white;
+    cursor: pointer;
 }

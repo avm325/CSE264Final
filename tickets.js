@@ -33,9 +33,10 @@ $("#lower_level").click(function(){
 
     $("#section").empty();
     $("#section").html("Section: lower level");
-    price.innerHTML = "";
+
     $("#price").empty();
     $("#price").append("Price: $99");
+    $("#selected-ticket").css("display", "block")
 });
 
 //update price every time gourmet checkbox is checked/unchecked
@@ -59,12 +60,14 @@ $("#sundeck").click(function () {
     $("#lower-level-ticket").css("display", "none");
     $("#pavilion-ticket").css("display", "none")
     $("#sundeck-ticket").css("display", "block")
+    $("#selected-ticket").css("display", "block")
 });
 
 $("#pavilion").click(function () {
     $("#lower-level-ticket").css("display", "none");
     $("#pavilion-ticket").css("display", "block")
     $("#sundeck-ticket").css("display", "none")
+    $("#selected-ticket").css("display", "block")
 });
 
 //display the upper level (sundeck and pavilion)
@@ -72,6 +75,7 @@ $("#up_arrow").click(function () {
     $("#sundeck").css("display", "block");
     $("#pavilion").css("display", "block");
     $("#lower_level").css("display", "none");
+    $("#level-num").html("Level 2");
 });
 
 //display lower level
@@ -79,6 +83,7 @@ $("#down_arrow").click(function () {
     $("#sundeck").css("display", "none");
     $("#pavilion").css("display", "none");
     $("#lower_level").css("display", "block");
+    $("#level-num").html("Level 1");
 });
 
 let test_ticket = new ticket("Gourmet Ticket", "Lower level", 199.00, "Bananza-Images/Tickets/darker-yellow-ticket.png");
