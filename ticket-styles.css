@@ -4,13 +4,13 @@
     display: flex;
 }
 
-#lower-level {
+#lower_level {
     display: block;
     transition: filter 0.3s ease-in-out;
     width: 45vw;
 }
 
-#lower-level:hover {
+#lower_level:hover {
     filter: brightness(150%);
 }
 
@@ -26,8 +26,7 @@
 
 #pavilion {
     position: relative;
-    right: 45vw;
-    bottom: 6.25vw;
+    bottom: 24.5vw;
     display: none;
     transition: filter 0.3s ease-in-out;
     width: 38vw;
@@ -35,10 +34,6 @@
 
 #pavilion:hover {
     filter: brightness(150%);
-}
-
-.level-arrows {
-    
 }
 
 #up_arrow, #down_arrow {
@@ -52,4 +47,8 @@
 
 #ticket-info {
     position: absolute;
+}
+
+.ticket-select {
+    margin-left: 8vw;
 }
