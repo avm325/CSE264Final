@@ -36,6 +36,8 @@ class ticket{
     }
 }
 
+function loadTickets(){
+
 let lower_level = $("#lower-level");
 let sundeck = $("#sundeck");
 let pavilion = $("#pavilion");
@@ -106,16 +108,14 @@ down_arrow.addEventListener("click", function () {
 
 let test_ticket = new ticket("Gourmet Ticket", "Lower level", 199.00, "Bananza-Images/Tickets/darker-yellow-ticket.png");
 cart_items.push(test_ticket);
-
+}
 //send array of cart items to the client
 app.get("/cart_click", (req, res) => {
     res.json(cart_items);
 });
 
 $(document).ready(function() {
-    
-
-    
+    loadTickets();
 });
 
 app.listen(3000, () => console.log("Initializing cart..."));
