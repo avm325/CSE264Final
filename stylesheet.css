@@ -1089,6 +1089,7 @@ border: none;
   .orange{
     position: absolute;
     top: 70%;
+    z-index: 0;
   }
   .lemon{
     position: absolute;
@@ -1105,6 +1106,7 @@ border: none;
     color: #64331E;
     font-family: "neue-kabel";
     cursor: pointer;
+    z-index: 4;
   }
  
   .question-container:hover{
