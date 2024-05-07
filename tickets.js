@@ -7,19 +7,21 @@
 //array to hold tickets that have been added to the cart
 let cart_items = [];
 
+let current_price = 0;
+let current_name = "";
+let current_section = "";
+
 //class for ticket objects
 /*  
     name: string
     section: string
-    price: number
-    gourmet: boolean
+    price: string
 */
 class ticket{
-    constructor(name, section, price, ticket_image){
+    constructor(name, section, price){
         this.name = name;
         this.section = section;
         this.price = price;
-        this.ticket_image = ticket_image;
     }
 }
 
@@ -37,12 +39,16 @@ $("#lower_level").click(function(){
     $("#price").empty();
     $("#price").append("Price: $99");
     $("#selected-ticket").css("display", "block")
+
+    current_name = "Lower level"
+    current_price = 99;
 });
 
 //update price every time gourmet checkbox is checked/unchecked
 $("#upgrade").click(function () {
     let price = $("#price");
     if(upgrade.checked){
+        current_price += 100;
         $("#price").empty(); //clear current price
         price.append("Price: $199"); //update price
     }else{
@@ -53,7 +59,30 @@ $("#upgrade").click(function () {
 
 //when user selects "add to cart"
 $("#add").click(function () {
-    let new_ticket = new ticket();
+    let new_ticket = new ticket(current_name, current_section, current_price);
+    let image = "";
+    let print_name = "";
+    //find associated ticket color
+    if (current_name === "Lower level"){
+        image = "Bananza-Images/Tickets/darker-yellow-ticket.png";
+    }else if(current_name === "Pavilion"){
+        image = "Bananza-Images/Tickets/dark-pink-ticket.png";
+    }else{
+        image = "Bananza-Images/Tickets/light-pink-ticket.png";
+    }
+    
+   if(document.getElementById('upgrade').checked){
+        print_name = `${new_ticket.name} (gourmet)`;
+   }else{
+        print_name = new_ticket.name;
+   }
+   
+    $("#ticket-items").append(`<div class="cart-row"><div class="cart-item cart-column">
+        <img class="cart-item-image" src=${image} width="100" height="100">
+        <span class="cart-item-title">${print_name}</span><span class="cart-item-section"><br><br><br><br>Section: ${new_ticket.section}</span></div>
+        <span class="cart-price cart-column">$${new_ticket.price}.00</span><div class="cart-quantity cart-column">
+        <input name="quantity "class="cart-quantity-input" type="number" value="1">
+        <button class="button-remove" type="button">Remove</button></div></div>`);
 });
 
 $("#sundeck").click(function () {
@@ -61,6 +90,9 @@ $("#sundeck").click(function () {
     $("#pavilion-ticket").css("display", "none")
     $("#sundeck-ticket").css("display", "block")
     $("#selected-ticket").css("display", "block")
+
+    current_name = "Sundeck"
+    current_price = 130;
 });
 
 $("#pavilion").click(function () {
@@ -68,6 +100,9 @@ $("#pavilion").click(function () {
     $("#pavilion-ticket").css("display", "block")
     $("#sundeck-ticket").css("display", "none")
     $("#selected-ticket").css("display", "block")
+
+    current_name = "Pavilion"
+    current_price = 150;
 });
 
 //display the upper level (sundeck and pavilion)

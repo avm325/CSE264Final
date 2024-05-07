@@ -1495,7 +1495,6 @@
     width: 15vw;
     height: auto;
     border-radius: 10px;
-    cursor: pointer;
 }
 .cart-starfruit{
     grid-column: 10/13;
