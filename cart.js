@@ -6,7 +6,6 @@ function getCartBubble(){
         let quantity = parseFloat(cartRow.find('.cart-quantity-input').val()); 
 
         number += (quantity);
-        console.log(number);    
         sessionStorage.setItem('cartBubbleNum', number); 
         placeTotalBubble(number);
 
@@ -48,13 +47,17 @@ function quantityChanged() {
 let cartQuantityInputs = $('.cart-quantity-input');
 
 function updateCartTotal() {
+
+    console.log("INDIDE updateCartTotal()");
     let cartItems = $('.cart-row');
     let total = 0;
 
     cartItems.each(function() {
         let cartRow = $(this);
-        let price = parseFloat(cartRow.find('.cart-price').text());
-        let quantity = parseFloat(cartRow.find('.cart-quantity-input').val()); 
+        let price = parseFloat(cartRow.find('.cart-price').text().slice(1)); //www.geeksforgeeks.org/delete-first-character-of-a-string-in-javascript/
+        console.log(cartRow.find('.cart-price').text())
+        let quantity = parseFloat(cartRow.find('.cart-quantity-input').val());  
+        console.log('price '+ price + ' quantity '+ quantity);
 
         total += (price * quantity);
     });
@@ -68,7 +71,7 @@ function updateCartTotal() {
 
 $(document).ready(function() {
     $('#cartBubble').text(0);
-    $('.cart-quantity-input').change(function() {
+    $('.cart-quantity-input').click(function() {
         updateCartTotal();
     });
     updateCartTotal();
@@ -76,5 +79,6 @@ $(document).ready(function() {
     quantityChanged();
     getCartBubble();
     setInterval(getCartBubble, 1000);
+    setInterval(updateCartTotal, 1000);
     
 });
