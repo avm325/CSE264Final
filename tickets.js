@@ -16,24 +16,9 @@ app.use(express.static(
 //array to hold tickets that have been added to the cart
 let cart_items = [];
 
-var faq = document.getElementsByClassName("faq-page");
 var i;
 
-for (i = 0; i < faq.length; i++) {
-    faq[i].addEventListener("click", function () {
-        /* Toggle between adding and removing the "active" class,
-        to highlight the button that controls the panel */
-        this.classList.toggle("active");
 
-        /* Toggle between hiding and showing the active panel */
-        var body = this.nextElementSibling;
-        if (body.style.display === "block") {
-            body.style.display = "none";
-        } else {
-            body.style.display = "block";
-        }
-    });
-}
 
 //class for ticket objects
 /*  
@@ -51,25 +36,25 @@ class ticket{
     }
 }
 
-let lower_level = document.getElementById("lower-level");
-let sundeck = document.getElementById("sundeck");
-let pavilion = document.getElementById("pavilion");
+let lower_level = $("#lower-level");
+let sundeck = $("#sundeck");
+let pavilion = $("#pavilion");
 
 //Toggle up and down arrows to select upper or lower seating
-let up_arrow = document.getElementById("up_arrow");
-let down_arrow = document.getElementById("down_arrow");
+let up_arrow = $("#up_arrow");
+let down_arrow = $("#down_arrow");
 
-let check_gourmet = document.getElementById("upgrade");
+let check_gourmet = $("#upgrade");
 
-let button = document.getElementById("add");
+let button = $("#add");
 
 //if lower level selected, display lower level ticket and info
 lower_level.addEventListener("click", function () {
-    let price = document.getElementById("price");
-    let ticket = document.getElementById("lower-level-ticket");
+    let price = $("#price");
+    let ticket = $("#lower-level-ticket");
     ticket.style.display = "block";
 
-    let section = document.getElementById("section");
+    let section =$("#section");
     section.innerHTML = "";
     section.append("Section: lower level");
     price.innerHTML = "";
@@ -78,7 +63,7 @@ lower_level.addEventListener("click", function () {
 
 //update price every time gourmet checkbox is checked/unchecked
 check_gourmet.addEventListener("click", function () {
-    let price = document.getElementById("price");
+    let price = $("#price");
     if(check_gourmet.checked){
         price.innerHTML = ""; //clear current price
         price.append("Price: $199"); //update price
@@ -95,12 +80,12 @@ button.addEventListener("click", function () {
 
 
 sundeck.addEventListener("click", function () {
-    let ticket = document.getElementById("sundeck-ticket");
+    let ticket =$("#sundeck-ticket");
     ticket.style.display = "block";
 });
 
 pavilion.addEventListener("click", function () {
-    let ticket = document.getElementById("pavilion-ticket");
+    let ticket = $("#pavilion-ticket");
     ticket.style.display = "block";
 });
 
@@ -127,4 +112,11 @@ app.get("/cart_click", (req, res) => {
     res.json(cart_items);
 });
 
+$(document).ready(function() {
+    
+
+    
+});
+
 app.listen(3000, () => console.log("Initializing cart..."));
+console.log(cart_items);
