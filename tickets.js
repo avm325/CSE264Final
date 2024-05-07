@@ -16,10 +16,6 @@ app.use(express.static(
 //array to hold tickets that have been added to the cart
 let cart_items = [];
 
-var i;
-
-
-
 //class for ticket objects
 /*  
     name: string
